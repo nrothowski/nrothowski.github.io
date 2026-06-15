@@ -1,0 +1,15 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*~
+
+# Power BI working files — keep the .pbix out of the public repo by default.
+# Only commit exported screenshots/images, not source workbooks.
+*.pbix
+*.pbit
+
+# Editor folders
+.vscode/
+.idea/
