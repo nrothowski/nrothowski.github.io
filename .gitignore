@@ -16,6 +16,9 @@ assets/source data/
 *.xlsx
 *.xlsm
 *.csv
+# ...except the deliberately-scrubbed synthetic data published for the downloadable reports:
+!assets/data/
+!assets/data/*.xlsx
 
 # Editor folders
 .vscode/
