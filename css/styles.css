@@ -131,7 +131,7 @@ img { max-width: 100%; display: block; }
   color: var(--accent);
   margin: 0 0 .75rem;
 }
-.hero .lead { font-size: 1.2rem; color: var(--muted); max-width: 60ch; }
+.hero .lead { font-size: 1.2rem; color: var(--muted); max-width: none; }
 .hero-actions { margin-top: 1.5rem; display: flex; gap: .75rem; flex-wrap: wrap; }
 
 /* Buttons -------------------------------------------------------------------- */
