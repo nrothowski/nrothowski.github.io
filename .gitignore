@@ -10,6 +10,13 @@ desktop.ini
 *.pbix
 *.pbit
 
+# Source / working data — never publish real or pre-scrubbed datasets.
+# (To publish a deliberately scrubbed file, force-add it: git add -f <file>)
+assets/source data/
+*.xlsx
+*.xlsm
+*.csv
+
 # Editor folders
 .vscode/
 .idea/

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nick Rothowski — Power BI Developer</title>
-  <meta name="description" content="Power BI developer building star-schema models, DAX, and decision-ready dashboards for finance and operations teams. Portfolio of analytics projects on public and synthetic data." />
+  <meta name="description" content="Power BI developer building star-schema models, DAX, and decision-ready dashboards for finance and operations teams. Portfolio of analytics projects on synthetic data." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -19,6 +19,7 @@
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -93,6 +94,53 @@
 
     <hr class="divider" />
 
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills &amp; tools</h2>
+          <p>The stack I use to take data from source to a decision-ready dashboard.</p>
+        </div>
+        <div class="build-grid">
+          <div>
+            <h3>Platforms</h3>
+            <ul class="tags">
+              <li>Power BI Desktop</li>
+              <li>Power BI Service</li>
+              <li>On-premises data gateway</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Data modeling</h3>
+            <ul class="tags">
+              <li>Star schema</li>
+              <li>Dimensional modeling</li>
+              <li>Row-level security</li>
+              <li>Scheduled refresh</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Languages</h3>
+            <ul class="tags">
+              <li>DAX</li>
+              <li>Power Query (M)</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Also</h3>
+            <ul class="tags">
+              <li>Excel</li>
+              <li>Data visualization</li>
+              <li>Data governance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
     <!-- About -->
     <section id="about">
       <div class="container">
@@ -101,15 +149,18 @@
         </div>
         <div class="prose stack">
           <p>
-            <!-- TODO: tailor this to your background. Placeholder copy below. -->
-            I&rsquo;m a Power BI developer focused on turning messy source data into trustworthy,
+            I&rsquo;m a Power BI developer who turns messy source data into trustworthy,
             self-service analytics. My work centers on clean dimensional modeling, maintainable
-            DAX, and dashboards that answer a specific business question rather than just display data.
+            DAX, and dashboards built to answer a specific business question &mdash; not just display data.
           </p>
           <p>
-            I care about data governance as much as visuals: every public artifact here is built on
-            synthetic sources, with revealing metadata stripped &mdash; the same discipline
-            I bring to handling sensitive data in a production environment.
+            I build reporting for <strong>finance and operations teams</strong>, where accuracy and
+            trust matter as much as the visuals.
+          </p>
+          <p>
+            I care about data governance as much as design: every project shown here runs on
+            synthetic data with revealing metadata stripped &mdash; the same discipline I bring to
+            sensitive data in production.
           </p>
         </div>
       </div>
@@ -120,12 +171,14 @@
     <div class="container">
       <p>&copy; <span id="year">2026</span> Nick Rothowski &middot; Built with plain HTML &amp; CSS, hosted on GitHub Pages.</p>
       <nav class="footer-links" aria-label="Contact and profiles">
+        <a href="assets/Nick-Rothowski-Resume.pdf">Résumé (PDF)</a>
         <a href="https://www.linkedin.com/in/nrothowski" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/nrothowski" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </footer>
 
+  <script src="js/lightbox.js" defer></script>
   <script>
     // Keep the footer year current without a build step.
     document.getElementById('year').textContent = new Date().getFullYear();
