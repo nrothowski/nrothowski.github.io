@@ -154,7 +154,7 @@ img { max-width: 100%; display: block; }
 /* Sections ------------------------------------------------------------------- */
 section { padding: clamp(2.5rem, 6vw, 4rem) 0; }
 .section-head { max-width: 65ch; margin-bottom: 2rem; }
-#projects .section-head { max-width: none; }   /* intro spans the full card-grid width */
+#projects .section-head, #skills .section-head { max-width: none; }   /* section intros span the full content width */
 .section-head p { color: var(--muted); margin: 0; }
 .divider { border: 0; border-top: 1px solid var(--border); margin: 0; }
 
