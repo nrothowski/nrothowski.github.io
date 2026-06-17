@@ -6,7 +6,7 @@
   <title>Logistics &amp; Delivery Analytics (Demo) — Nick Rothowski</title>
   <meta name="description" content="A Power BI operational dashboard for grocery-delivery logistics — on-time rates, route load, and exception tracking — rebuilt on fully synthetic data for public display." />
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/styles.css?v=2" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -38,19 +38,36 @@
         </p>
 
         <div class="data-note">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            <path d="M9 12l2 2 4-4" />
-          </svg>
-          <div>
+          <div class="note-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="M9 12l2 2 4-4" />
+            </svg>
             <strong>Data &amp; privacy</strong>
-            <p>
-              Originally built on a live operational database; rebuilt for this portfolio on
-              <strong>fully synthetic data</strong>. Column names are preserved so the visuals and DAX
-              rebind unchanged, but every value is regenerated &mdash; no real, nudged, or proprietary
-              figures appear.
-            </p>
           </div>
+          <p>
+            Originally built on a live operational database; rebuilt for this portfolio on
+            <strong>fully synthetic data</strong>. Column names are preserved so the visuals and DAX
+            rebind unchanged, but every value is regenerated &mdash; no real, nudged, or proprietary
+            figures appear.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>The challenge</h2>
+        </div>
+        <div class="prose">
+          <p>
+            A grocery-delivery operation runs hundreds of orders a day across dozens of routes, and the
+            signals that actually matter &mdash; late deliveries, strained routes, exceptions that need a
+            call &mdash; are scattered across transactional records, not visible in one place. The hard part
+            isn&rsquo;t the data; it&rsquo;s distilling it into the few things a dispatcher or operations lead
+            can act on in the moment.
+          </p>
         </div>
       </div>
     </section>
@@ -71,24 +88,15 @@
     <section>
       <div class="container">
         <div class="section-head">
-          <h2>Get the report</h2>
-          <p>Open the actual Power BI file to explore the model, DAX, and interactions &mdash; built entirely on synthetic data.</p>
-        </div>
-        <a class="btn btn-primary" href="../assets/pbix/Order%20Map.pbix" download>Download the .pbix</a>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h2>What it shows</h2>
+          <h2>What it enables</h2>
+          <p>Rather than a wall of metrics, the report is built around the questions an operations lead actually asks:</p>
         </div>
         <div class="prose">
           <ul>
-            <li>Where delivery demand concentrates across the service area</li>
-            <li>On-time delivery rate against target</li>
-            <li>Route load and where capacity is strained</li>
-            <li>Delivery exceptions that need attention</li>
+            <li><strong>Are we on track today?</strong> &mdash; on-time rate against target, at a glance</li>
+            <li><strong>Where is demand concentrated?</strong> &mdash; order distribution across the service area</li>
+            <li><strong>Which routes are strained?</strong> &mdash; route load and capacity pressure points</li>
+            <li><strong>What needs attention now?</strong> &mdash; delivery exceptions surfaced, not buried</li>
           </ul>
         </div>
       </div>
@@ -106,7 +114,8 @@
             <h3>Data model</h3>
             <p>
               Star schema: a deliveries fact table surrounded by date, region/zone, route, and
-              customer-segment dimensions &mdash; sized to answer operational questions quickly.
+              customer-segment dimensions &mdash; kept deliberately simple, so a new question rarely
+              means a new model.
             </p>
           </div>
           <div>
@@ -124,6 +133,16 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Get the report</h2>
+          <p>Open the actual Power BI file to explore the model, DAX, and interactions &mdash; built entirely on synthetic data.</p>
+        </div>
+        <a class="btn btn-primary" href="../assets/pbix/Order%20Map.pbix" download>Download the .pbix</a>
       </div>
     </section>
   </main>

@@ -6,7 +6,7 @@
   <title>Operational Analytics (Demo) — Nick Rothowski</title>
   <meta name="description" content="A Power BI executive operations dashboard — throughput, labor utilization, and SLA adherence — rebuilt on fully synthetic data for public display." />
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/styles.css?v=2" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -38,19 +38,36 @@
         </p>
 
         <div class="data-note">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            <path d="M9 12l2 2 4-4" />
-          </svg>
-          <div>
+          <div class="note-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="M9 12l2 2 4-4" />
+            </svg>
             <strong>Data &amp; privacy</strong>
-            <p>
-              Originally built on a live operational database; rebuilt for this portfolio on
-              <strong>fully synthetic data</strong>. Column names are preserved so the visuals and DAX
-              rebind unchanged, but every value is regenerated &mdash; no real, nudged, or proprietary
-              figures appear.
-            </p>
           </div>
+          <p>
+            Originally built on a live operational database; rebuilt for this portfolio on
+            <strong>fully synthetic data</strong>. Column names are preserved so the visuals and DAX
+            rebind unchanged, but every value is regenerated &mdash; no real, nudged, or proprietary
+            figures appear.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>The challenge</h2>
+        </div>
+        <div class="prose">
+          <p>
+            A distribution operation moves through thousands of picks, packs, and trips a day, and the
+            signals that actually matter &mdash; throughput keeping pace, labor matched to demand, service
+            levels holding &mdash; are spread across systems and shift reports, not visible in one place. The
+            hard part isn&rsquo;t the data; it&rsquo;s distilling it into the few things an operations leader
+            can act on in the moment.
+          </p>
         </div>
       </div>
     </section>
@@ -71,24 +88,15 @@
     <section>
       <div class="container">
         <div class="section-head">
-          <h2>Get the report</h2>
-          <p>Open the actual Power BI file to explore the model, DAX, and interactions &mdash; built entirely on synthetic data.</p>
-        </div>
-        <a class="btn btn-primary" href="../assets/pbix/Outbound%20Utilization.pbix" download>Download the .pbix</a>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h2>What it shows</h2>
+          <h2>What it enables</h2>
+          <p>Rather than a wall of metrics, the report is built around the questions an operations leader actually asks:</p>
         </div>
         <div class="prose">
           <ul>
-            <li>Outbound utilization by hour and by facility</li>
-            <li>Scheduled vs. temp labor hours against actual throughput</li>
-            <li>Pick and checkout productivity (packs per active hour)</li>
-            <li>Trip-building load and bags per hour</li>
+            <li><strong>Are we keeping pace?</strong> &mdash; outbound throughput by hour and by facility</li>
+            <li><strong>Is labor matched to the work?</strong> &mdash; scheduled vs. temp hours against actual throughput</li>
+            <li><strong>Where is productivity slipping?</strong> &mdash; pick and checkout output per active hour</li>
+            <li><strong>What&rsquo;s the downstream load?</strong> &mdash; trip-building volume and bags per hour</li>
           </ul>
         </div>
       </div>
@@ -105,8 +113,8 @@
           <div>
             <h3>Data model</h3>
             <p>
-              Star schema: an operations fact table with date, shift, department, and location
-              dimensions &mdash; structured so each KPI traces back to a single grain.
+              Star schema: an operations fact table surrounded by date, shift, department, and location
+              dimensions &mdash; kept deliberately simple, so each KPI traces back to a single grain.
             </p>
           </div>
           <div>
@@ -124,6 +132,16 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Get the report</h2>
+          <p>Open the actual Power BI file to explore the model, DAX, and interactions &mdash; built entirely on synthetic data.</p>
+        </div>
+        <a class="btn btn-primary" href="../assets/pbix/Outbound%20Utilization.pbix" download>Download the .pbix</a>
       </div>
     </section>
   </main>
